@@ -2,7 +2,7 @@ import Rebase from 're-base'
 import firebase from 'firebase'
 
 
-const firebaseApp = firebase.initializeApp({apiKey: "AIzaSyAz1rzvuoNFX5b1Jghf-1vgh4oKkHOtGRU",
+const firebaseApp = firebase.initializeApp({apiKey: "------apiKey------",
     authDomain: "myfirebaseproj-87676.firebaseapp.com",
     databaseURL: "https://myfirebaseproj-87676.firebaseio.com",
     projectId: "myfirebaseproj-87676",
