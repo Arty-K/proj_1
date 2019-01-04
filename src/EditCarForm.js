@@ -1,7 +1,21 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 
 export default class EditCarForm extends Component {
+    static = {
+        car: PropTypes.shape({
+            name:PropTypes.string,
+            price:PropTypes.number,
+            status:PropTypes.string,
+            desc:PropTypes.string,
+            image:PropTypes.string
+        }),
+        index: PropTypes.string,
+        updateCar: PropTypes.func
+    };
+
+
     handleChange = (e) => {
         console.log(e.currentTarget.name);
         const updatedCar = {
@@ -10,6 +24,7 @@ export default class EditCarForm extends Component {
         };
         this.props.updateCar(this.props.index, updatedCar);
     };
+
 
     render() {
         return(

@@ -5,16 +5,22 @@ import EditCarForm from './EditCarForm';
 
 import Login from './Login';
 import base, { firebaseApp } from './base';
+import PropTypes from 'prop-types';
 
 
 export default class Inventory extends Component {
-
+    static propTypes = {
+        storeName: PropTypes.string,
+        cars: PropTypes.object,
+        updateCar: PropTypes.func,
+        deleteCar: PropTypes.func,
+        addCar: PropTypes.func,
+        loadSamples: PropTypes.func
+    }
     authHandler = async authData => {
        const store = await base.fetch(this.props.storeName, {context: this});
         console.log(store);
-
         console.log(authData);
-
     };
 
     authenticate = provider => {

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import Inventory from './Inventory';
 import Car from './Car';
 import Order from './Order';
@@ -6,11 +8,16 @@ import sampleCars from './sampleCars';
 import base from './base';
 
 
+
 export default class App extends Component {
     state = {
         cars: {},
         order: {}
     };
+
+    static propTypes = {
+        match: PropTypes.object
+    }
 
     componentDidMount(){
         const localStorageRef = localStorage.getItem(this.props.match.params.storeName);

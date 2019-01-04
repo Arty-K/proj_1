@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 
 export default class AddForm extends Component {
+    static propTypes = {
+        addCar: PropTypes.func,
+        _createCar: PropTypes.func
+    };
+
     nameRef = React.createRef();
     priceRef = React.createRef();
     statusRef = React.createRef();

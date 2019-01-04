@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import Header from './Header';
+import PropTypes from 'prop-types';
 
 
 export default class Welcome extends Component {
+    static propTypes = {
+        history: PropTypes.object,
+        goToSite: PropTypes.func
+    }
+
     myInput = React.createRef();
 
     goToSite = e => {
@@ -42,7 +48,6 @@ export default class Welcome extends Component {
                                         <button className="btn btn-outline-secondary" type="submit">enter the site</button>
                                     </div>
                             </div>
-
                         </form>
                     </div>
                 </div>

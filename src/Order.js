@@ -1,7 +1,18 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 
 export default class Order extends Component {
+    static propTypes = {
+        cars: PropTypes.object,
+        order:PropTypes.object,
+        status:PropTypes.string,
+        name:PropTypes.string,
+        price:PropTypes.string,
+        removeFromOrder:PropTypes.func,
+        renderOrder:PropTypes.func
+
+    }
     renderOrder = key => {
         const car = this.props.cars[key];
         const count = this.props.order[key];
